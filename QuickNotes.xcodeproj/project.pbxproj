@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D96E09DE2AB878DB009FA087 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = D96E09DD2AB878DB009FA087 /* KeychainAccess */; };
 		D9954CED2AB77A7C005E1FF0 /* QuickNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9954CEC2AB77A7C005E1FF0 /* QuickNotesApp.swift */; };
 		D9954CEF2AB77A7C005E1FF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9954CEE2AB77A7C005E1FF0 /* ContentView.swift */; };
 		D9954CF12AB77A7D005E1FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9954CF02AB77A7D005E1FF0 /* Assets.xcassets */; };
 		D9954CF42AB77A7D005E1FF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9954CF32AB77A7D005E1FF0 /* Preview Assets.xcassets */; };
+		D9954CFC2AB7833D005E1FF0 /* FontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9954CFB2AB7833D005E1FF0 /* FontSizes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		D9954CF02AB77A7D005E1FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9954CF32AB77A7D005E1FF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D9954CF52AB77A7D005E1FF0 /* QuickNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickNotes.entitlements; sourceTree = "<group>"; };
+		D9954CFB2AB7833D005E1FF0 /* FontSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96E09DE2AB878DB009FA087 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				D9954CEC2AB77A7C005E1FF0 /* QuickNotesApp.swift */,
 				D9954CEE2AB77A7C005E1FF0 /* ContentView.swift */,
+				D9954CFB2AB7833D005E1FF0 /* FontSizes.swift */,
 				D9954CF02AB77A7D005E1FF0 /* Assets.xcassets */,
 				D9954CF52AB77A7D005E1FF0 /* QuickNotes.entitlements */,
 				D9954CF22AB77A7D005E1FF0 /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = QuickNotes;
+			packageProductDependencies = (
+				D96E09DD2AB878DB009FA087 /* KeychainAccess */,
+			);
 			productName = QuickNotes;
 			productReference = D9954CE92AB77A7C005E1FF0 /* QuickNotes.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = D9954CE02AB77A7C005E1FF0;
+			packageReferences = (
+				D96E09DC2AB878DB009FA087 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = D9954CEA2AB77A7C005E1FF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9954CEF2AB77A7C005E1FF0 /* ContentView.swift in Sources */,
+				D9954CFC2AB7833D005E1FF0 /* FontSizes.swift in Sources */,
 				D9954CED2AB77A7C005E1FF0 /* QuickNotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +286,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +314,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D96E09DC2AB878DB009FA087 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D96E09DD2AB878DB009FA087 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D96E09DC2AB878DB009FA087 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D9954CE12AB77A7C005E1FF0 /* Project object */;
 }
